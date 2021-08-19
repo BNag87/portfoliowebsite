@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Code Samples</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class = "codeSamples">
+    <div id = "navbar">
+        <a href = "index.html">Home</a>
+        <a href = "aboutme.html">About Me</a>
+        <a href = "contact.html">Contact</a>
+        <a href = "codesamples.html">Code Samples</a>
+    </div>
+
+<br>
+
+    <div class = "nonFlexTitleBox">
+        <h1>Code Samples</h1>
+    </div>
+
+<div class = "massContainer">
+    <h2>Dice Roller [Python]</h2>
+    <p>This code allows dice rolls to be made any number number of times, with any number of dice faces. It also allows a bonus value to be input that gets added to the total at the end of the function</p>
+    <h3>Code Block:</h3>
+
+    <div class = "codeBlockBox">
+        <div class="codeBlock">
+            <p class = "pythonCode">
+            <br>&emsp;def dice_roller(count, sides, bonus):
+            <br>&emsp;<i class = "pythonComment"># convert inputs to variables</i>
+            <br>&emsp;&emsp;count_to_roll = count
+            <br>&emsp;&emsp;number_of_sides = sides
+            <br>&emsp;&emsp;bonus_to_add = bonus
+            <br>&emsp;<i class = "pythonComment"># create variables for use inside the function</i>
+            <br>&emsp;&emsp;loop_index = count_to_roll
+            <br>&emsp;&emsp;x = 0
+            <br>&emsp;roll_total = 0
+    
+            <br>&emsp;<i class = "pythonComment"># as long as x is less than the number of times you roll the dice...</i>
+            <br>&emsp;&emsp;while x < count_to_roll:
+            <br>&emsp;<i class = "pythonComment"># increase the x index...</i>
+            <br>&emsp;&emsp;x += 1
+            <br>&emsp;<i class = "pythonComment"># create a variable to store a random dice roll between 1 and the number of sides the dice has...</i>
+            <br>&emsp;&emsp;result = (random.randint(1, number_of_sides) + bonus)
+            <br>&emsp;<i class = "pythonComment">#print out the result...</i>
+            <br>&emsp;<i class = "pythonComment">#print("Roll "+str(x)+": [1d"+str(number_of_sides)+"] = " +str(result))</i>
+
+            <br><br>&emsp;<i class = "pythonComment">#set a variable to store the result of the roll (including multiple rolls)...</i>
+            <br>&emsp;&emsp;roll_total = roll_total + result
+    
+            <br><br>&emsp;<i class = "pythonComment">#...then if there are any bonuses to the roll, add them here whilst printing them out</i>
+            <br>&emsp;&emsp;<i class = "pythonComment">#print("Bonus: +"+str(bonus_to_add)+".")</i>
+            <br>&emsp;&emsp;<i class = "pythonComment">#print("Total (with bonus): "+str(rollTotal+bonus_to_add)+".\n")</i>   
+    
+            <br>&emsp;<i class = "pythonComment"># beware. this only returns the result of the last roll done in the while loop, not the first or any others in between.</i>
+            <br>&emsp;&emsp;return result</p>
+    </div>
+</div>
+
+<h3>Results if called with 'diceRoller(3, 20, 0)':</h3>
+    <div class = "resultsBlockBox">
+        <div class = "resultsBlock">
+            <p>
+            19
+            <br>5
+            <br>14
+            </p>
+        </div>
+    </div>
+</div>   
+
+<!-- New code segment below -->
+<br><br>
+
+<div class = "massContainer">
+    <h2>Function Operation [Python]</h2>
+    <p>This function takes an existing value from a list/array and generates a new number from it. If passed as a parameter to the dice roller above, it can be used to add a bonus to the results of a dice roll. This is an example of attribute modification in the world of DnD.</p>
+    <h3>Code Block:</h3>
+    <div class = "codeBlockBox">
+        <div class="codeBlock">
+            <p class = "pythonCode">
+            <br><i class = "pythonComment"># this nested list is required to work with the function below</i>
+            <br><i class = "pythonComment"># the function will get the value stored in the 9th position</i>
+            <br>
+            <br>&emsp;charList = [["The Player", 33, 40, "Protagonist", 1, 2, False, 5, 3, 5],
+            <br>&emsp;["The Strongman", 40, 30, "Strongman", 1, 2, False, 5, 1, 3]]
+
+            <br><br>
+
+            <br><i class = "pythonComment"># this function will set a bonus to speed rolls depending on the speed attribute</i>
+            <br>&emsp;def generate_player_speed_bonus():
+            <br><br>&emsp;&emsp;player_speed_bonus = 0
+            <br>&emsp;&emsp;if charList[0][9] == 1:
+            <br>&emsp;&emsp;&emsp;player_speed_bonus = -3
+            <br>&emsp;&emsp;&emsp;return player_speed_bonus
+            <br><br>&emsp;&emsp;elif charList[0][9] == 3:
+            <br>&emsp;&emsp;&emsp;player_speed_bonus = 0
+            <br>&emsp;&emsp;&emsp;return player_speed_bonus
+            <br><br>&emsp;&emsp;elif charList[0][9] == 5:
+            <br>&emsp;&emsp;&emsp;player_speed_bonus = 3
+            <br>&emsp;&emsp;&emsp;return player_speed_bonus
+            <br><br>&emsp;&emsp;else:
+            <br>&emsp;&emsp;&emsp;print("Something went wrong when setting the player_speed_bonus. Setting it to 0")
+            <br>&emsp;&emsp;&emsp;return player_speed_bonus
+            </p>
+        </div>
+    </div>
+
+
+<h3>Results if called with 'diceRoller(1, 20, generate_player_speed_bonus())':</h3>
+    <div class = "resultsBlockBox">
+        <div class = "resultsBlock">
+            <p>
+            15
+            </p>
+            ...or (12 + 3 = 15)
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
