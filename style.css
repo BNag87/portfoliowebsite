@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');/* 
+/*font-family: 'Lato', sans-serif;*/
+
+/* This changes everything */
+
+body{
+    background-image: url("Images/stonetexture.jpg");
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+.codeSamples {
+    background-image: url("/Images/MatrixCode.jpg");
+  }
+
+.headshot {
+    background-image: url("/Images/Headshot.jpg");
+}
+
+h1{
+    text-align: center;
+    color: darkblue;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* Use .classname to change everything with that class name */
+
+
+.nonFlexTitleBox{
+    /* This class is used to create a box around a div that wraps a h1 tag for display purposes. It is meant to be used without a flex-box */
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(235,235,235,0.9) 0%, rgba(136,136,136,0.5) 100%);
+
+    border: 2px solid #999;
+    border-radius: 7px;
+    margin: auto;
+    padding: 5px;
+    width: 14%;
+    
+}
+
+.textUpCentre{
+    text-align: center;
+    font-size: large;
+}
+
+.codetextUpCentre{
+    text-align: center;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.textBuffUp{
+    font-size: large;
+    font-weight: 700;
+}
+
+.textUp{
+    font-size: large;
+}
+
+
+.nonFlexBox{
+    /* This class is used to create a box around a div for display purposes. It is meant to be used without a flex-box */
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(235,235,235,0.9) 0%, rgba(136,136,136,0.5) 100%);
+
+    border: 2px solid #999;
+    border-radius: 7px;
+    margin: auto;
+    padding: 5px;
+    width: 800px;
+    
+}
+
+.nonFlexBoxDisplayLine{
+    /* This class is used to create a box around a div for display purposes. It is meant to be used without a flex-box */
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(205,205,205,0.9) 0%, rgba(116,116,116,0.5) 100%);
+    display: inline-block;
+    border: 2px solid #999;
+    border-radius: 7px;
+    
+    padding: 9px 1px 1px 8px;
+        
+}
+
+
+
+.centreImage{
+    /* This class is used to centre an image within a div. Width must remain at 50% or it won't work */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.massContainer{
+/* This is for containing a section of code and its results*/
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(235,235,235,1) 0%, rgba(136,136,136,1) 100%);
+
+    border: 2px solid #999;
+    border-radius: 7px;
+    margin: 15px;
+    padding: 5px;
+}
+
+.codeBlockBox{
+/* This is for the central content inside of a codeBlockBox */
+    border: 20px, double, white;    
+    color: white;
+
+    padding: 5px;
+    margin: 15px;
+    width: 55%;
+
+    background-color: black;
+
+    display:flex;
+    justify-content: center;
+}
+
+.resultsBlockBox{
+/* This is for the outside box that will contain a resultBlock */
+    border: 3px solid #999;
+    border-radius: 20px;
+        
+    color: white;
+    background-color: black;
+    
+    padding: 5px;
+    margin: 15px;
+    width: 15%;
+    
+    display:flex;
+    justify-content: center;
+}
+
+.codeBlock{
+/* This is for the central content inside of a codeBlockBox */
+    border: 8px double #5aa;
+    color: white;
+    padding: 5px;
+    background-color: navy;
+    padding: 1.5% 1.5% 2%;
+    font-family: 'Courier New', Courier, monospace;
+    width: 95%;
+}
+
+.resultsBlock{
+/* This is for the central content inside of a resultsBlockBox */
+    border: 8px double #5aa;
+    border-radius: 15px;
+
+    color: black;
+    
+    padding: 5px;
+    width: 95%;
+
+    background-color: white;
+    padding: 1.5% 1.5% 2%;
+    
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.pythonComment {
+    color:lightgreen;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* Use # to change anything with that id name */
+
+#navbar{
+    background-color: dimgrey;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #000;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#navbar a:hover{
+    color: goldenrod;
+}
