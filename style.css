@@ -49,14 +49,20 @@ h1{
 }
 
 .textBuffUp{
+    /* Increases text size and weight */
     font-size: large;
     font-weight: 700;
 }
 
 .textUp{
+    /* Upscales text only */
     font-size: large;
 }
 
+.textCentre{
+    /* Centres text only */
+    text-align: center;
+}
 
 .nonFlexBox{
     /* This class is used to create a box around a div for display purposes. It is meant to be used without a flex-box */
@@ -70,15 +76,30 @@ h1{
     
 }
 
+.nonFlexBoxBack{
+    /* This class is used to create a box around a div for display purposes. It is meant to be used without a flex-box */
+    background-image: url(Images/codeshot.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* This class is used to create a box around a div for display purposes. It is meant to be used without a flex-box */
+    
+    border: 2px solid #999;
+    border-radius: 7px;
+    margin: auto;
+    padding: 5px;
+    width: 820px;
+    height: 495px;
+    
+};
+
+
 .nonFlexBoxDisplayLine{
     /* This class is used to create a box around a div for display purposes. It is meant to be used without a flex-box */
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(205,205,205,0.9) 0%, rgba(116,116,116,0.5) 100%);
     display: inline-block;
     border: 2px solid #999;
     border-radius: 7px;
-    
-    padding: 9px 1px 1px 8px;
-        
+
 }
 
 
