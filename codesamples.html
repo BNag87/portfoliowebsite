@@ -109,7 +109,6 @@
         </div>
     </div>
 
-
 <h3>Results if called with 'diceRoller(1, 20, generate_player_speed_bonus())':</h3>
     <div class = "resultsBlockBox">
         <div class = "resultsBlock">
@@ -120,6 +119,50 @@
         </div>
     </div>
 </div>
+
+<div class = "massContainer">
+    <h2>Insult Generator [Python]</h2>
+    <p>This code takes three random elements from three different lists and concatenates them, producing an insult.</p>
+    <h3>Code Block:</h3>
+    <div class = "codeBlockBox">
+        <div class="codeBlock">
+            <p class = "pythonCode">
+                <br>&emsp;<i class = "pythonComment">#====================IMPORTS====================</i>
+                <br>&emsp;import random<br>
+                
+                <br>&emsp;<i class = "pythonComment">#====================VARIABLES====================</i>
+                    
+                <br>&emsp;firstSetList = ["artless", "bawdy","beslubbering","..."]
+                <br>&emsp;secondSetList = ["base-court","bat-fowling","beef-witted","..."]
+                <br>&emsp;thirdSetList = ["apple-john","baggage","barnacle","..."]<br>
+                <br>&emsp;<i class = "pythonComment">#====================FUNCTIONS====================</i>
+                
+                <br>&emsp;def genInsult():
+                <br>&emsp;&emsp;random_first_index = random.randint(0,int(len(firstSetList)-1))
+                <br>&emsp;&emsp;random_second_index = random.randint(0,int(len(secondSetList)-1))
+                <br>&emsp;&emsp;random_third_index = random.randint(0,int(len(thirdSetList)-1))
+                <br>&emsp;&emsp;print("Thou art a " + str(firstSetList[random_first_index])+ ", " 
+                <br>&emsp;&emsp;&emsp;+ str(secondSetList[random_second_index] + " " 
+                <br>&emsp;&emsp;&emsp;+ str(thirdSetList[random_third_index]+"!")))
+                
+                <br><br>&emsp;genInsult()
+
+            </p>
+        </div>
+    </div>
+        
+                <h3>Results if called with 'genInsult()' three times:</h3>
+                <div class = "resultsBlockBox">
+                    <div class = "resultsBlock">
+                        <p>
+                        Thou art a gleeking, sheep-biting dewberry!<br><br>
+                        Thou art a mangled, knotty-patted lout!<br><br>
+                        Thou art a fobbing, rump-fed ratsbane!
+                        </p>
+                        <i>Total of 150,000 possible combinations.</i><br><br>    
+                    </div>
+                    
+                </div>
 
 </body>
 </html>
